@@ -183,16 +183,16 @@ function TENTUKAN_TIER_MEMBER(poin) {
 // 3. Cetak data Pelanggan B dan C ke tab Console.
 
 // Simulasi Pelanggan B
-let TOTAL_POIN_B = hitungTotalPoin(35, 25, 20);
-let TIER_PELANGGAN_B = tentukanTierMember(TOTAL_POIN_B);
+let TOTAL_POIN_B = HITUNG_TOTAL_POINT(35, 25, 20);
+let TIER_PELANGGAN_B = TENTUKAN_TIER_MEMBER(TOTAL_POIN_B);
 
 console.log("=== DATA PELANGGAN B ===");
 console.log("Total Poin : " + TOTAL_POIN_B);
 console.log("Tier       : " + TIER_PELANGGAN_B);
 
 // Simulasi Pelanggan C
-let TOTAL_POIN_C = hitungTotalPoin(15, 10, 5);
-let TIER_PELANGGAN_C = tentukanTierMember(TOTAL_POIN_C);
+let TOTAL_POIN_C = HITUNG_TOTAL_POINT(15, 10, 5);
+let TIER_PELANGGAN_C = TENTUKAN_TIER_MEMBER(TOTAL_POIN_C);
 
 console.log("=== DATA PELANGGAN C ===");
 console.log("Total Poin : " + TOTAL_POIN_C);
@@ -206,17 +206,29 @@ console.log("Tier       : " + TIER_PELANGGAN_C);
 // TODO 6A:
 // Buat variabel Array bernama "menuRekomendasi" yang berisi minimal 5 nama menu kopi/makanan.
 
+let MENU_REKOMENDASI = [
+    "Kopi Susu Gula Aren",
+    "Cappuccino",
+    "Matcha Latte",
+    "Croissant",
+    "Roti Bakar Cokelat"
+];
 
-
+console.log("=== MENU REKOMENDASI ===");
 
 // TODO 6B:
 // Gunakan perulangan "for loop" untuk mencetak setiap menu ke Console dengan format:
 // "1. Nama Menu", "2. Nama Menu", dst. Gunakan (i + 1) untuk nomor urutnya.
 
-
+for (let i = 0; i < MENU_REKOMENDASI.length; i++) {
+    console.log((i + 1) + ". " + MENU_REKOMENDASI[i]);
+}
 
 
 // TODO 6C:
 // Cetak jumlah total menu di akhir daftar menggunakan properti ".length".
 // Akhiri program dengan: console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
 
+console.log("Total Menu Rekomendasi : " + MENU_REKOMENDASI.length);
+
+console.log("=== TUGAS MANDIRI SELESAI DENGAN SUKSES! ===");
